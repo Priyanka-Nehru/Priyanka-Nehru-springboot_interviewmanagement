@@ -1,5 +1,7 @@
-
-
+tasks:
+  - init: git remote set-url origin git@github.com:Priyanka-Nehru/Priyanka-Nehru-springboot_interviewmanagement.git
+  - name: husky dependency
+  - init: npm install husky --save-dev && npx husky install && npm pkg set scripts.prepare="husky install" && npx husky add .husky/post-commit "git log -1 --shortstat > history_log.txt" && npx husky add .husky/pre-commit "chmod 600 ~/.ssh/id_rsa && chmod 644 ~/.ssh/id_rsa.pub && ssh-keyscan github.com >> ~/.ssh/known_hosts"
 vscode:
  extensions:
-   - kyntrack.gitpod-plugin
+   - revaturePro.revature-labs
